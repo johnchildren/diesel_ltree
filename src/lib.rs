@@ -1,4 +1,3 @@
-extern crate byteorder;
 #[macro_use]
 extern crate diesel;
 
@@ -82,7 +81,7 @@ pub mod values {
     }
 }
 
-pub mod functions {
+mod functions {
     use crate::sql_types::*;
     use diesel::sql_types::*;
 
@@ -100,7 +99,7 @@ pub mod functions {
     sql_function!(fn ltxtquery(x: Text) -> Ltxtquery);
 }
 
-pub mod dsl {
+mod dsl {
     use crate::sql_types::*;
     use diesel::expression::{AsExpression, Expression};
     use diesel::sql_types::Array;
